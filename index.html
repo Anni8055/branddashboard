@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Dashboard | Influencer Marketing Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="./img/logo.png" alt="Brand Logo" class="logo">
+                <h2>BrandConnect</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#dashboard-overview"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#campaigns"><i class="fas fa-bullhorn"></i> Campaigns</a>
+                    </li>
+                    <li>
+                        <a href="#influencers"><i class="fas fa-users"></i> Influencers</a>
+                    </li>
+                    <li>
+                        <a href="#messages"><i class="fas fa-comment-dots"></i> Messages</a>
+                    </li>
+                    <li>
+                        <a href="#wallet"><i class="fas fa-wallet"></i> Wallet & Payments</a>
+                    </li>
+                    <li>
+                        <a href="#analytics"><i class="fas fa-chart-line"></i> Analytics</a>
+                    </li>
+                    <li>
+                        <a href="#settings"><i class="fas fa-cog"></i> Settings</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="#help"><i class="fas fa-question-circle"></i> Help</a>
+                <a href="#logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                
+                <div class="user-menu">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user-profile">
+                        <img src="./img/profile-placeholder.jpg" alt="User Profile">
+                        <span>Brand Account</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Dashboard Overview Section -->
+            <section id="dashboard-overview" class="dashboard-section active">
+                <h1>Dashboard Overview</h1>
+                
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-bullhorn"></i></div>
+                        <div class="stat-info">
+                            <h3>Active Campaigns</h3>
+                            <p class="stat-value">5</p>
+                            <p class="stat-change positive">+2 this month</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <div class="stat-info">
+                            <h3>Influencer Applications</h3>
+                            <p class="stat-value">42</p>
+                            <p class="stat-change positive">+15 this week</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-eye"></i></div>
+                        <div class="stat-info">
+                            <h3>Total Impressions</h3>
+                            <p class="stat-value">254K</p>
+                            <p class="stat-change positive">+12.5% from last month</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-wallet"></i></div>
+                        <div class="stat-info">
+                            <h3>Wallet Balance</h3>
+                            <p class="stat-value">$12,450</p>
+                            <p class="stat-change neutral">No change</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <div class="graph-card">
+                        <div class="card-header">
+                            <h3>Campaign Performance</h3>
+                            <div class="card-options">
+                                <select>
+                                    <option>Last 7 Days</option>
+                                    <option>Last 30 Days</option>
+                                    <option>Last 3 Months</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="performanceChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="recent-applications">
+                        <div class="card-header">
+                            <h3>Recent Applications</h3>
+                            <a href="#influencers" class="view-all">View All</a>
+                        </div>
+                        <div class="card-body">
+                            <ul class="application-list">
+                                <li class="application-item">
+                                    <img src="./img/influencer1.jpg" alt="Influencer 1">
+                                    <div class="application-info">
+                                        <h4>Sarah Johnson</h4>
+                                        <p>Fashion & Lifestyle • 125K followers</p>
+                                        <p class="campaign-name">Summer Collection Campaign</p>
+                                    </div>
+                                    <div class="application-actions">
+                                        <button class="btn accept">Accept</button>
+                                        <button class="btn decline">Decline</button>
+                                    </div>
+                                </li>
+                                <li class="application-item">
+                                    <img src="./img/influencer2.jpg" alt="Influencer 2">
+                                    <div class="application-info">
+                                        <h4>Mike Williams</h4>
+                                        <p>Tech Reviews • 89K followers</p>
+                                        <p class="campaign-name">Product Launch Campaign</p>
+                                    </div>
+                                    <div class="application-actions">
+                                        <button class="btn accept">Accept</button>
+                                        <button class="btn decline">Decline</button>
+                                    </div>
+                                </li>
+                                <li class="application-item">
+                                    <img src="./img/influencer3.jpg" alt="Influencer 3">
+                                    <div class="application-info">
+                                        <h4>Emma Davis</h4>
+                                        <p>Beauty & Makeup • 215K followers</p>
+                                        <p class="campaign-name">New Cosmetics Line</p>
+                                    </div>
+                                    <div class="application-actions">
+                                        <button class="btn accept">Accept</button>
+                                        <button class="btn decline">Decline</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="recent-messages">
+                        <div class="card-header">
+                            <h3>Recent Messages</h3>
+                            <a href="#messages" class="view-all">View All</a>
+                        </div>
+                        <div class="card-body">
+                            <ul class="message-list">
+                                <li class="message-item unread">
+                                    <img src="./img/influencer1.jpg" alt="Influencer 1">
+                                    <div class="message-info">
+                                        <h4>Sarah Johnson</h4>
+                                        <p>I've submitted the draft content for approval...</p>
+                                        <span class="message-time">10:23 AM</span>
+                                    </div>
+                                </li>
+                                <li class="message-item">
+                                    <img src="./img/influencer4.jpg" alt="Influencer 4">
+                                    <div class="message-info">
+                                        <h4>David Chen</h4>
+                                        <p>Thank you for accepting my application...</p>
+                                        <span class="message-time">Yesterday</span>
+                                    </div>
+                                </li>
+                                <li class="message-item">
+                                    <img src="./img/influencer5.jpg" alt="Influencer 5">
+                                    <div class="message-info">
+                                        <h4>Priya Sharma</h4>
+                                        <p>When would be a good time to discuss...</p>
+                                        <span class="message-time">2 days ago</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Campaigns Section -->
+            <section id="campaigns" class="dashboard-section">
+                <div class="section-header">
+                    <h1>Campaigns</h1>
+                    <button class="btn primary" id="create-campaign-btn">
+                        <i class="fas fa-plus"></i> Create Campaign
+                    </button>
+                </div>
+                
+                <div class="campaign-tabs">
+                    <button class="tab-btn active" data-tab="active">Active (5)</button>
+                    <button class="tab-btn" data-tab="draft">Draft (2)</button>
+                    <button class="tab-btn" data-tab="completed">Completed (8)</button>
+                </div>
+                
+                <div class="campaign-list">
+                    <div class="campaign-card">
+                        <div class="campaign-banner">
+                            <img src="./img/campaign1.jpg" alt="Summer Collection">
+                            <span class="campaign-status active">Active</span>
+                        </div>
+                        <div class="campaign-details">
+                            <h3>Summer Collection Campaign</h3>
+                            <div class="campaign-meta">
+                                <span><i class="fas fa-calendar"></i> Jun 1 - Aug 31, 2023</span>
+                                <span><i class="fas fa-users"></i> 12 Influencers</span>
+                                <span><i class="fas fa-eye"></i> 125K Impressions</span>
+                            </div>
+                            <div class="campaign-progress">
+                                <span>Progress: 65%</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 65%"></div>
+                                </div>
+                            </div>
+                            <div class="campaign-actions">
+                                <button class="btn secondary"><i class="fas fa-edit"></i> Edit</button>
+                                <button class="btn secondary"><i class="fas fa-chart-bar"></i> Analytics</button>
+                                <button class="btn secondary"><i class="fas fa-pause"></i> Pause</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="campaign-card">
+                        <div class="campaign-banner">
+                            <img src="./img/campaign2.jpg" alt="Product Launch">
+                            <span class="campaign-status active">Active</span>
+                        </div>
+                        <div class="campaign-details">
+                            <h3>Product Launch Campaign</h3>
+                            <div class="campaign-meta">
+                                <span><i class="fas fa-calendar"></i> Jul 15 - Sep 15, 2023</span>
+                                <span><i class="fas fa-users"></i> 8 Influencers</span>
+                                <span><i class="fas fa-eye"></i> 85K Impressions</span>
+                            </div>
+                            <div class="campaign-progress">
+                                <span>Progress: 40%</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 40%"></div>
+                                </div>
+                            </div>
+                            <div class="campaign-actions">
+                                <button class="btn secondary"><i class="fas fa-edit"></i> Edit</button>
+                                <button class="btn secondary"><i class="fas fa-chart-bar"></i> Analytics</button>
+                                <button class="btn secondary"><i class="fas fa-pause"></i> Pause</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Other sections will be hidden by default and shown when clicked -->
+            <section id="influencers" class="dashboard-section">
+                <h1>Influencer Applications</h1>
+                <!-- Content will be added here -->
+            </section>
+            
+            <section id="messages" class="dashboard-section">
+                <h1>Messages</h1>
+                <!-- Content will be added here -->
+            </section>
+            
+            <section id="wallet" class="dashboard-section">
+                <h1>Wallet & Payments</h1>
+                <!-- Content will be added here -->
+            </section>
+            
+            <section id="analytics" class="dashboard-section">
+                <h1>Analytics</h1>
+                <!-- Content will be added here -->
+            </section>
+            
+            <section id="settings" class="dashboard-section">
+                <h1>Settings</h1>
+                <!-- Content will be added here -->
+            </section>
+        </main>
+    </div>
+    
+    <!-- Campaign Creation Modal -->
+    <div class="modal" id="campaign-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create New Campaign</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="campaign-form">
+                    <div class="form-group">
+                        <label for="campaign-name">Campaign Name</label>
+                        <input type="text" id="campaign-name" placeholder="Enter campaign name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="campaign-description">Description</label>
+                        <textarea id="campaign-description" placeholder="Enter campaign description" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="start-date">Start Date</label>
+                            <input type="date" id="start-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="end-date">End Date</label>
+                            <input type="date" id="end-date" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="campaign-budget">Budget (USD)</label>
+                        <input type="number" id="campaign-budget" placeholder="Enter budget amount" min="1" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="campaign-goals">Campaign Goals</label>
+                        <select id="campaign-goals" multiple required>
+                            <option value="awareness">Brand Awareness</option>
+                            <option value="engagement">Engagement</option>
+                            <option value="sales">Sales Conversion</option>
+                            <option value="leads">Lead Generation</option>
+                            <option value="traffic">Website Traffic</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="target-audience">Target Audience</label>
+                        <input type="text" id="target-audience" placeholder="E.g., Women, 18-34, Fashion enthusiasts">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="campaign-requirements">Requirements for Influencers</label>
+                        <textarea id="campaign-requirements" placeholder="List specific requirements for influencers" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="campaign-image">Campaign Banner Image</label>
+                        <input type="file" id="campaign-image" accept="image/*">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn secondary" id="save-draft">Save as Draft</button>
+                        <button type="submit" class="btn primary">Create Campaign</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/dashboard.js"></script>
+</body>
+</html>
